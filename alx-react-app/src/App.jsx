@@ -20,8 +20,8 @@ function App() {
       <div>
         <UserProfile
           name = "Alice"
-          age = "25"
-          bio = "Loves hiking and photography" 
+          Age = "25"
+          Bio = "Loves hiking and photography" 
         />
       </div>
 
