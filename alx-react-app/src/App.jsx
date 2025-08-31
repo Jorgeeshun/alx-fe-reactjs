@@ -19,15 +19,15 @@ function App() {
 
       <div>
         <UserProfile
-          name = "Alice"
-          Age = "25"
-          Bio = "Loves hiking and photography" 
+          name="Alice"
+          age="25"
+          bio="Loves hiking and photography" 
         />
       </div>
 
       <Footer />
     </>
-  )
+  );
 }
 
 export default App
