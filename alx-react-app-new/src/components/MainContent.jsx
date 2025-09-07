@@ -12,7 +12,7 @@ function MainContent() {
     >
       <h2 style={{ color: "darkgreen" }}>Welcome to My City Guide</h2>
       <p style={{ fontSize: "16px", marginTop: "10px" }}>
-        Explore amazing places and learn more about my favorite cities.
+        I love to visit New York, Paris, and Tokyo.
       </p>
     </main>
   );
