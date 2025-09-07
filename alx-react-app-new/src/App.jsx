@@ -1,32 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import WelcomeMessage from './components/WelcomeMessage'
-import Header from './components/Header'
-import MainContent from './components/MainContent'
-import Footer from './components/Footer'
-import UserProfile from './components/UserProfile'
+import React from "react";
+import Header from "./Header";
+import MainContent from "./MainContent";
+import UserProfile from "./UserProfile";
+import Footer from "./Footer";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <WelcomeMessage />
+    <div>
       <Header />
       <MainContent />
-
-      <div>
-        <UserProfile
-          name="Alice"
-          age="25"
-          bio="Loves hiking and photography" 
-        />
-      </div>
-
+      <UserProfile name="George" age="25" bio="Frontend developer who loves React and design." />
+      <UserProfile name="Ama" age="30" bio="Traveler, foodie, and culture enthusiast." />
       <Footer />
-    </>
+    </div>
   );
 }
 
