@@ -2,6 +2,14 @@ import axios from "axios";
 
 const BASE_URL = "https://api.github.com/search/users";
 
+/**
+ * Advanced user search using GitHub's Search API
+ * @param {string} username - GitHub username (partial or full)
+ * @param {string} location - User location
+ * @param {string|number} minRepos - Minimum number of public repositories
+ * @param {number} page - Page number for pagination
+ */
+
 export const advancedSearchUsers = async (username, location, minRepos, page = 1) => {
   try {
     let query = "";
