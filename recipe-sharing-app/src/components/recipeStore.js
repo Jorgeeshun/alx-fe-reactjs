@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 
 
-export const recipeStore = create((set, get) => ({
+export const useRecipeStore = create((set, get) => ({
 // core data
 recipes: [],
 
@@ -107,4 +107,4 @@ recommendations: [],
     }),
 }));
 
-export default recipeStore;
+export default useRecipeStore;

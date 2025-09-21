@@ -1,10 +1,10 @@
 // src/components/AddRecipeForm.jsx
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { recipeStore } from './recipeStore';
+import { useRecipeStore } from './recipeStore';
 
 const AddRecipeForm = () => {
-const addRecipe = recipeStore((s) => s.addRecipe);
+const addRecipe = useRecipeStore((s) => s.addRecipe);
 const [title, setTitle] = useState('');
 const [description, setDescription] = useState('');
 const [ingredientsInput, setIngredientsInput] = useState('');
