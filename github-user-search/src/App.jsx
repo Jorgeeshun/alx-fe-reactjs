@@ -3,8 +3,10 @@ import Search from "./components/Search";
 
 function App() {
   return (
-    <div style={{ padding: "2rem", fontFamily: "Arial" }}>
-      <h1>GitHub User Search</h1>
+    <div className="min-h-screen bg-gray-50">
+      <h1 className="text-3xl font-bold text-center py-6 text-gray-800">
+        GitHub Advanced User Search
+      </h1>
       <Search />
     </div>
   );
