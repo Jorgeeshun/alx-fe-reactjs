@@ -1,9 +1,5 @@
 import axios from "axios";
 
-const API_KEY = import.meta.env.VITE_APP_GITHUB_API_KEY;
-
-console.log(API_KEY); // will print your token (only in dev, not bundled in git)
-
 
 const BASE_URL = "https://api.github.com/users";
 
