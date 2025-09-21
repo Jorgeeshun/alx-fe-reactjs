@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { recipeStore } from './recipeStore';
+import { useRecipeStore } from './recipeStore';
 
 
 const EditRecipeForm = () => {
 const { id } = useParams();
 const recipeId = Number(id);
-const recipe = recipeStore((s) => s.recipes.find((r) => r.id === recipeId));
-const updateRecipe = recipeStore((s) => s.updateRecipe);
+const recipe = useRecipeStore((s) => s.recipes.find((r) => r.id === recipeId));
+const updateRecipe = useRecipeStore((s) => s.updateRecipe);
 const navigate = useNavigate();
 
 
