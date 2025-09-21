@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { fetchUserData } from "../services/githubService";
 import { advancedSearchUsers } from "../services/githubService";
 
 function Search() {
@@ -15,6 +16,24 @@ function Search() {
     setLoading(true);
     setError("");
     setUsers([]);
+
+     const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!username) return;
+
+    setLoading(true);
+    setError("");
+    setUser(null);
+
+    try {
+      const data = await fetchUserData(username);
+      setUser(data);
+    } catch (err) {
+      setError("Looks like we can’t find the user");
+    } finally {
+      setLoading(false);
+    }
+  };
 
     try {
       const results = await advancedSearchUsers(username, location, minRepos, 1);
