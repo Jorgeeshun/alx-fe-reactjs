@@ -4,12 +4,14 @@ import AddRecipeForm from './components/AddRecipeForm';
 import RecipeList from './components/RecipeList';
 import RecipeDetails from './components/RecipeDetails';
 import EditRecipeForm from './components/EditRecipeForm';
+import SearchBar from './components/SearchBar';
+import Filters from './components/Filters';
 
 
 function App() {
 return (
 <Router>
-<div style={{ maxWidth: 800, margin: '20px auto', padding: '0 16px', fontFamily: 'system-ui, Arial' }}>
+<div style={{ maxWidth: 900, margin: '20px auto', padding: '0 16px', fontFamily: 'system-ui, Arial' }}>
 <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
 <h1><Link to="/">Recipe Sharing App</Link></h1>
 </header>
@@ -21,6 +23,8 @@ return (
 path="/"
 element={(
 <>
+<SearchBar />
+<Filters />
 <AddRecipeForm />
 <RecipeList />
 </>
