@@ -1,11 +1,11 @@
 // src/components/FavoritesList.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import recipeStore from './recipeStore';
+import useRecipeStore from './recipeStore';
 
 const FavoritesList = () => {
-  const recipes = recipeStore((state) => state.recipes);
-  const favorites = recipeStore((state) => state.favorites);
+  const recipes = useRecipeStore((state) => state.recipes);
+  const favorites = useRecipeStore((state) => state.favorites);
 
   const favoriteRecipes = favorites
     .map((id) => recipes.find((r) => r.id === id))
