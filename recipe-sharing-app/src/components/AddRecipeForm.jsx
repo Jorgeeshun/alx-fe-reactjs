@@ -65,5 +65,6 @@ placeholder="Prep time (minutes)"
 <button type="submit">Add Recipe</button>
 </form>
 );
+}
 
 export default AddRecipeForm;
