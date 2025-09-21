@@ -1,18 +1,39 @@
-// src/App.jsx
 import React from 'react';
-import RecipeList from './components/RecipeList';
+import { Routes, Route, Link } from 'react-router-dom';
 import AddRecipeForm from './components/AddRecipeForm';
-import './App.css'; // Assuming some basic styling
+import RecipeList from './components/RecipeList';
+import RecipeDetails from './components/RecipeDetails';
+import EditRecipeForm from './components/EditRecipeForm';
+
 
 function App() {
-  return (
-    <div className="App" style={{ fontFamily: 'sans-serif', textAlign: 'center', padding: '20px' }}>
-      <h1>Recipe Sharing App</h1>
-      <AddRecipeForm />
-      <hr style={{ margin: '20px 0' }} />
-      <RecipeList />
-    </div>
-  );
+return (
+<div style={{ maxWidth: 800, margin: '20px auto', padding: '0 16px', fontFamily: 'system-ui, Arial' }}>
+<header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+<h1><Link to="/">Recipe Sharing App</Link></h1>
+</header>
+
+
+<main>
+<Routes>
+<Route
+path="/"
+element={(
+<>
+<AddRecipeForm />
+<RecipeList />
+</>
+)}
+/>
+
+
+<Route path="/recipes/:id" element={<RecipeDetails />} />
+<Route path="/recipes/:id/edit" element={<EditRecipeForm />} />
+</Routes>
+</main>
+</div>
+);
 }
+
 
 export default App;
